@@ -37,7 +37,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="person" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="bytclient" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="BytLife" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -49,7 +49,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/person.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bytclient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -73,30 +73,38 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="328" y="234" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585025007844">
+    <state x="328" y="234" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585053641068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="328" y="234" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585025007844" />
+    <state x="328" y="234" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585053641068" />
+    <state x="730" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585053037787">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="730" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585053037787" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585054149325">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585054149325" />
     <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1585031717189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585031717188" />
-    <state width="1899" height="279" key="GridCell.Tab.0.bottom" timestamp="1585052262819">
+    <state width="1899" height="279" key="GridCell.Tab.0.bottom" timestamp="1585054374032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585052262819" />
-    <state width="1899" height="279" key="GridCell.Tab.0.center" timestamp="1585052262818">
+    <state width="1899" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585054374032" />
+    <state width="1899" height="279" key="GridCell.Tab.0.center" timestamp="1585054374031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585052262818" />
-    <state width="1899" height="279" key="GridCell.Tab.0.left" timestamp="1585052262817">
+    <state width="1899" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585054374031" />
+    <state width="1899" height="279" key="GridCell.Tab.0.left" timestamp="1585054374031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585052262817" />
-    <state width="1899" height="279" key="GridCell.Tab.0.right" timestamp="1585052262818">
+    <state width="1899" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585054374031" />
+    <state width="1899" height="279" key="GridCell.Tab.0.right" timestamp="1585054374032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585052262818" />
+    <state width="1899" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585054374032" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1585052041070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
