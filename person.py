@@ -1,7 +1,7 @@
 import random
 
 #   To do next:
-#   - Birthday/Star Sign
+#   - Birthday [done] /Star Sign
 #   - Emotions [Done] that update each time you age [Done]
 #   - Parents
 #   - Location where you were concieved.
@@ -10,7 +10,7 @@ import random
 
 
 class Person:
-    def __init__(self, sex, first_name, last_name, age, ethnicity, happiness, health, smarts, looks):
+    def __init__(self, sex, first_name, last_name, age, ethnicity, happiness, health, smarts, looks, birthday):
         self.sex = sex
         self.first_name = first_name
         self.last_name = last_name
@@ -20,6 +20,7 @@ class Person:
         self.health = health
         self.smarts = smarts
         self.looks = looks
+        self.birthday = birthday
 
     def determine_sex(self):
         if random.randint(0, 1) == 0:
@@ -80,3 +81,15 @@ class Person:
         self.smarts += random.randint(-1, 2)
         self.looks += random.randint(-1, 2)
         return f"Happiness: {self.happiness} | Health: {self.health} | Smarts: {self.smarts}, Looks: {self.looks}"
+
+    def determine_birthday(self):
+        star_sign = ""
+        months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+        month = random.choice(months)
+        days = random.randint(1, 31)
+        if months == "January" and days == range(20, 31) or months == "February" and days == (1, 16):
+            star_sign = "Capricorn"
+        else:
+            star_sign = "null"
+        self.birthday = month, days, star_sign
+        return self.birthday

@@ -2,6 +2,10 @@
 from person import Person
 
 
+print("Welcome to BytLife! A Python clone of the popular app BitLife!")
+
+
+#   Underline age
 def underline(underlined_by, word_underlined):
     underlined = underlined_by * len(word_underlined)
     return underlined
@@ -9,7 +13,7 @@ def underline(underlined_by, word_underlined):
 
 def client():
     #   Initialisation
-    p = Person("", "", "", 0, "", 0, 0, 0, 0)
+    p = Person("", "", "", 0, "", 0, 0, 0, 0, [])
     #   General
     sex = p.determine_sex()
     name = p.determine_name()
@@ -24,6 +28,7 @@ def client():
     health = p.determine_health()
     looks = p.determine_looks()
     smarts = p.determine_smarts()
+    birthday = p.determine_birthday()
 
     begin = input("Exist? Press A\n")
     while alive is True:
@@ -34,7 +39,7 @@ def client():
         if play_count <= 0 and (begin == "a" or begin == "A"):
             print(f'I am a {ethnicity} {sex}. I was conceived at a [LOCATION].\n'
                   f'\n'
-                  f'            My birthday is MONTH DAY. I am a STAR SIGN.\n'
+                  f'            My birthday is {birthday[0]} {birthday[1]}. I am a {birthday[2]}.\n'
                   f'\n'
                   f'            My name is {name} {surname}.\n'
                   f'            My father is FATHER {surname}, a JOB (age (AGE))\n'
@@ -48,6 +53,8 @@ def client():
             age += 1
             print(p.determine_emotion())
             begin = input("Age? Press A\n")
-
+        else:
+            print("Invalid input")
+            alive = False
 
 client()
