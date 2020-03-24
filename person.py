@@ -7,7 +7,7 @@ year = 0
 
 #   To do next:
 #   - Birthday/Star Sign
-#   - Emotions [Done] that update each time you age
+#   - Emotions [Done] that update each time you age [Done]
 #   - Parents
 #   - Location where you were concieved.
 #   - Grab names from an API vs. making them manually.
@@ -47,7 +47,7 @@ class Person:
         return self.last_name
 
     def determine_age(self):
-        self.age = year
+        self.age = 0
         return self.age
 
     def determine_ethnicity(self):
@@ -64,19 +64,26 @@ class Person:
 
     def determine_happiness(self):
         self.happiness = random.randint(0, 100)
-        return self.happiness
+        return int(self.happiness)
 
     def determine_health(self):
         self.health = random.randint(0, 100)
-        return self.health
+        return int(self.health)
 
     def determine_smarts(self):
         self.smarts = random.randint(0, 100)
-        return self.smarts
+        return int(self.smarts)
 
     def determine_looks(self):
         self.looks = random.randint(0, 100)
-        return self.looks
+        return int(self.looks)
+
+    def determine_emotion(self):
+        self.happiness = self.happiness + random.randint(-1, 1)
+        self.health += random.randint(-1, 2)
+        self.smarts += random.randint(-1, 2)
+        self.looks += random.randint(-1, 2)
+        return f"Happiness: {self.happiness} | Health: {self.health} | Smarts: {self.smarts}, Looks: {self.looks}"
 
 
 #   Underline the word so it will always be equal to the length of it.
@@ -89,12 +96,15 @@ def underline_word(placeholder, word):
 #  Instantiate the class Person and start playing.
 def client():
     #   Uh. . .
-    p = Person("", "", "", "", "", "", "", "", "")
+    p = Person("", "", "", 0, "", 0, 0, 0, 0)
+    #   General
     sex = p.determine_sex()
     name = p.determine_name()
     surname = p.determine_surname()
     ethnicity = p.determine_ethnicity()
     age = p.determine_age()
+    alive = True
+    play_count = 0
 
     #   Emotions
     happiness = p.determine_happiness()
@@ -104,20 +114,33 @@ def client():
 
     begin = input("Age? Press A\n")
 
-    start = 0
-    if start <= 0 and (begin == "a" or begin == "A"):
-        display_age = "Age: {} Years".format(str(int(age) + 1))
-        print(display_age)
-        print(underline_word("=", display_age))
-        print(f'I am a {ethnicity} {sex}. I was conceived at a [LOCATION].\n'
-              f'\n'
-              f'            My birthday is MONTH DAY. I am a STAR SIGN.\n'
-              f'\n'
-              f'            My name is {name} {surname}.\n'
-              f'            My father is FATHER {surname}, a JOB (age (AGE))\n'
-              f'            My mother is MOTHER {surname}, a JOB (age (AGE))')
+    #   Start = 0, if over 0, it's the next turn.
+    display_age = "Age: {} Years".format(str(int(age)))
+    print(display_age)
+    print(underline_word("=", display_age))
 
-    print(f"Happiness: {happiness}/100 | Health {health}/100 | Looks {looks}/100 | Smarts {smarts}/100")
-
-
+    while alive is True:
+        if play_count <= 0 and (begin == "a" or begin == "A"):
+            print(f'I am a {ethnicity} {sex}. I was conceived at a [LOCATION].\n'
+                  f'\n'
+                  f'            My birthday is MONTH DAY. I am a STAR SIGN.\n'
+                  f'\n'
+                  f'            My name is {name} {surname}.\n'
+                  f'            My father is FATHER {surname}, a JOB (age (AGE))\n'
+                  f'            My mother is MOTHER {surname}, a JOB (age (AGE))')
+            print(p.determine_emotion())
+            age += 1
+            play_count += 1
+            begin = input("Age? Press A\n")
+        elif play_count >= 1:
+            play_count += 1
+            age += 1
+            display_age = "Age: {} Years".format(str(int(age)))
+            print(display_age)
+            print(underline_word("=", display_age))
+            print(p.determine_emotion())
+            print()
+            begin = input("Age? Press A\n")
 client()
+
+
