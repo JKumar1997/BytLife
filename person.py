@@ -3,7 +3,7 @@ import random
 #   To do next:
 #   - Birthday [done] /Star Sign
 #   - Emotions [Done] that update each time you age [Done]
-#   - Parents
+#   - Parents / Jobs
 #   - Location where you were concieved.
 #   - Grab names from an API vs. making them manually.
 #   - Reduce repetitive code
@@ -90,6 +90,7 @@ class Person:
         if months == "January" and days == range(20, 31) or months == "February" and days == (1, 16):
             star_sign = "Capricorn"
         else:
+            #   Add other star signs at a later date.
             star_sign = "null"
         self.birthday = month, days, star_sign
         return self.birthday

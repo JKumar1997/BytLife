@@ -20,6 +20,8 @@ def client():
     surname = p.determine_surname()
     ethnicity = p.determine_ethnicity()
     age = p.determine_age()
+    birthday = p.determine_birthday()
+
     alive = True
     play_count = 0
 
@@ -28,7 +30,6 @@ def client():
     health = p.determine_health()
     looks = p.determine_looks()
     smarts = p.determine_smarts()
-    birthday = p.determine_birthday()
 
     begin = input("Exist? Press A\n")
     while alive is True:
@@ -49,12 +50,12 @@ def client():
             play_count += 1
             begin = input("Age? Press A\n")
         elif play_count >= 1 and (begin == "a" or begin == "A"):
-            play_count += 1
             age += 1
+            play_count += 1
             print(p.determine_emotion())
             begin = input("Age? Press A\n")
         else:
             print("Invalid input")
-            alive = False
+            break
 
 client()
